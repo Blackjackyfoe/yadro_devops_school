@@ -1,0 +1,10 @@
+.dockerignore
+*.md
+**/__pycache__/
+myvenv/
+.gitignore
+docker-compose.yml
+Dockerfile
+.devcontainer/
+.gitlab-ci.yml
+.env

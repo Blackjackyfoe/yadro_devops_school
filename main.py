@@ -9,4 +9,4 @@ for router in routers:
     app.include_router(router)
 
 if __name__ == "__main__":
-  uvicorn.run("main:app", reload=True, port=settings.PORT)
+  uvicorn.run("main:app", reload=True, port=settings.PORT, host="0.0.0.0")
