@@ -1,0 +1,11 @@
+{
+    "name": "test_app",
+    "image": "penteka/currency_app",
+    "privileged": true,
+    "workspaceFolder": "${localWorkspaceFolder}",
+    "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+    "mounts": [
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/root/.gitconfig,type=bind,consistency=cached"
+    ],
+    "overrideCommand": true
+}

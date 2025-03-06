@@ -1,0 +1,17 @@
+services:
+  currency_app:
+    image: penteka/currency_app:latest
+    container_name: "currency_app"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT-8000}:8000"
+    environment:
+      PORT: ${PORT-8000}
+    healthcheck:
+      test: curl --fail http://localhost || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s

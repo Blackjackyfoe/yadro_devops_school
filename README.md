@@ -72,8 +72,7 @@
 Для запуска выполнить
 
 ```bash
-pip install -r requirements.txt
-python3 main.py
+docker-compose up --build -d
 ```
 
         
