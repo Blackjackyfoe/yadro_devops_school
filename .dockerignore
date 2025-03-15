@@ -8,3 +8,5 @@ Dockerfile
 .devcontainer/
 .gitlab-ci.yml
 .env
+Jenkinsfile
+images/
