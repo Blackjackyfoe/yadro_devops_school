@@ -1,0 +1,7 @@
+---
+galaxy_info:
+  author: Vladislav Ivanychev
+  description: Installing java on agents
+  company: YADRO
+  license: MIT
+  min_ansible_version: "2.1"

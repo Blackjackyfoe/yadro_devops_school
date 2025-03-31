@@ -1,0 +1,8 @@
+---
+- name: Install Java on jenkins-worket hosts
+  vars_files:
+    - secret.yml
+  hosts: workers
+  roles:
+    - name: java17
+      become: true

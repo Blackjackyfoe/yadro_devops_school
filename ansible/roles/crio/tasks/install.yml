@@ -1,0 +1,28 @@
+---
+- name: Add crio GPG key
+  ansible.builtin.apt_key:
+    url: "https://download.opensuse.org/repositories/isv:/cri-o:/stable:/{{ crio_version }}/deb/Release.key"
+    state: present
+    keyring: /etc/apt/keyrings/cri-o-apt-keyring.gpg
+
+- name: Add crio apt repository
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/cri-o-apt-keyring.gpg] https://download.opensuse.org/repositories/isv:/cri-o:/stable:/{{ crio_version }}/deb/ /"
+    state: present
+    filename: /etc/apt/sources.list.d/cri-o.list
+
+- name: Update cache
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 0
+
+- name: Install cri-o
+  ansible.builtin.apt:
+    name: cri-o
+    state: present
+
+- name: Start and enable crio service
+  ansible.builtin.service:
+    name: crio
+    enabled: true
+    state: started

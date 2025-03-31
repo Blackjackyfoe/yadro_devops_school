@@ -1,0 +1,8 @@
+---
+- name: Install crio and k8s utils
+  vars_files:
+    - secret.yml
+  hosts: all
+  roles:
+    - name: crio
+      become: true

@@ -1,0 +1,10 @@
+---
+galaxy_info:
+  author: Vladislav Ivanychev
+  description: Installing crio
+  company: YADRO
+  license: MIT
+  min_ansible_version: "2.1"
+
+dependencies:
+  - role: k8s
