@@ -1,0 +1,6 @@
+- name: Ensure OpenJDK 17 installed
+  ansible.builtin.apt:
+    name: "{{ java17_default_package_name }}"
+    state: present
+    update_cache: true
+    cache_valid_time: 0

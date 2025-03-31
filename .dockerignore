@@ -10,3 +10,4 @@ Dockerfile
 .env
 Jenkinsfile
 images/
+ansible/
