@@ -1,0 +1,5 @@
+apiVersion: v2
+name: currency-app-chart
+description: Helm chart для приложения currency-app (DaemonSet) и сервиса whoami на YADRO DevOps курс
+version: 0.1.0
+appVersion: "1.0"
