@@ -30,3 +30,9 @@ spec:
           env:
             - name: HOST
               value: 0.0.0.0
+          readinessProbe:
+            httpGet:
+              path: /info
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
